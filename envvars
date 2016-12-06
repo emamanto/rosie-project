@@ -10,9 +10,14 @@ export CLASSPATH=$CLASSPATH:$APRIL_HOME/java/april.jar
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$APRIL_HOME/lib:$APRIL_HOME/java/jni/jgl
 alias java='java -ea -server'
 
+# UORC
+#export UORC_HOME=$ROSIE_PROJ/uorc
+#export CLASSPATH=$CLASSPATH:$UORC_HOME/user/java/orc.jar
+
 # PROBCOG
 export PROBCOG_HOME=$ROSIE_PROJ/probcog
 export CLASSPATH=$CLASSPATH:$PROBCOG_HOME/java/probcog.jar
+export PROBCOG_CONFIG=$PROBCOG_HOME/config/robot.config.local
 
 # SOAR
 export SOAR_HOME=$ROSIE_PROJ/soar/out
@@ -21,7 +26,10 @@ export CLASSPATH=$CLASSPATH:$SOAR_HOME/java/sml.jar:$SOAR_HOME/SoarJavaDebugger.
 
 # ROSIE
 export ROSIE_HOME=$ROSIE_PROJ/rosie
-export CLASSPATH=$CLASSPATH:$ROSIE_HOME/java/language/lgsoar.jar:$ROSIE_HOME/java/rosie.jar
+export ROSIE_CONFIG=$PROBCOG_HOME/config/rosie.config.local
+# Don't need, java code is in probcog folder now
+#export CLASSPATH=$CLASSPATH:$ROSIE_HOME/java/language/lgsoar.jar:$ROSIE_HOME/java/insoar.jar
+export CLASSPATH=$CLASSPATH:$ROSIE_HOME/java/rosie.jar
 
 
 
